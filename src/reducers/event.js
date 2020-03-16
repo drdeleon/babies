@@ -3,6 +3,8 @@ import omit from 'lodash/omit';
 
 import * as types from '../types/event';
 
+export const EVENT_TYPES = ['Siesta', 'Pacha', 'Cambio de pañal (popó)', 'Cambio de pañal (pipi)', 'Pecho']
+
 const order = (state = [], action) => {
     switch (action.type) {
         case types.NEW_EVENT_ADDED:
@@ -84,6 +86,15 @@ export const getAllEvents = state => state.order.map(
     id => getEvent(state, id),
 ).filter(event => event !== null);
 
-export const getBabyEvents = (state, babyId) => state.eventsToBaby[babyId].map(
-    eventId => getEvent(state, eventId),
-).filter(event => event !== null);
+export const getBabyEvents = (state, babyId) => {
+    if (state.eventsToBaby[babyId] !== undefined) {
+        return state.eventsToBaby[babyId].map(
+            eventId => getEvent(state, eventId),
+        ).filter(event => event !== null);
+    } else {
+        return [];
+    }
+
+}
+
+export const getBabyEvent = (state, babyId, eventId) => getEvent(state, state.eventsToBaby[babyId].find(id => id === eventId));

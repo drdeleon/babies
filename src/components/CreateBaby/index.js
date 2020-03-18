@@ -1,4 +1,4 @@
-import React, { useState, Fragment} from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import './styles.css';
@@ -6,6 +6,7 @@ import './styles.css';
 import * as actions from '../../actions/baby';
 import { Link, useHistory, withRouter } from 'react-router-dom';
 import { history } from '../App';
+import {v4 as uuidv4} from 'uuid';
 
 const CreateBaby = ({ onSubmit }) => {
     const [name, changeName] = useState('');
@@ -48,12 +49,14 @@ export default withRouter(connect(
     undefined,
     dispatch => ({
         onSubmit( name, lastName ) {
+            const id = uuidv4()
 
             if (name !== '' && lastName !== '') {
                 //tenés que importar history para hacer push!
                 // import { history } from '../App';
                 history.push('/baby');
-                dispatch(actions.createBaby(name, lastName, new Date()));
+                dispatch(actions.createBaby(id, name, lastName, new Date()));
+                dispatch(actions.selectBaby(id));
             } else {
                 alert('Por favor llenar campos de nombre y apellido')
             }

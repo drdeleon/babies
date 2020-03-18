@@ -19,7 +19,9 @@ const Events = ({ babyEvents, babyId }) => (
                     event => (
                         <Event
                         key={event.id}
-                        babyId={babyId}/>
+                        eventId={event.id}
+                        babyId={babyId}
+                        />
                     ),
                 )
             )
@@ -30,7 +32,6 @@ const Events = ({ babyEvents, babyId }) => (
 export default withRouter(connect(
     state => {
         let selectedBaby = selectors.getSelectedBaby(state);
-        console.log(selectors.getBabyEvents(state, selectedBaby));
 
         return {
             babyEvents: selectors.getBabyEvents(state, selectedBaby),

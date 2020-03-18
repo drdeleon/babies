@@ -1,0 +1,43 @@
+.event-form {
+    align-self: flex-end;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-form-title {
+    padding-top: 3rem;
+    font-family: 'Trebuchet MS';
+}
+
+.types-dropdown {
+    max-width: 20rem;
+    margin: 1rem;
+    font-family: 'Trebuchet MS';
+}
+
+.event-form-description-input {
+    width: 35rem;
+    height: 8rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 0rem;
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.create-event-button {
+    padding: 1rem;
+    margin: 1rem;
+    border: 2rem;
+    align-self: center;
+    border-radius: 5rem;
+    width: 10rem;
+    background-color: #00c4c0;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
+    font-weight: bolder;
+}

@@ -53,6 +53,6 @@ export default baby;
 export const getBaby = (state, id) => state.byId[id]
 export const getBabies = state => state.order.map(
     id => getBaby(state, id),
-).filter(agent => agent != null);
+).filter(baby => baby != null);
 
-export const getSelectedBaby = (state) => state.selected
+export const getSelectedBaby = (state) => state.selected;

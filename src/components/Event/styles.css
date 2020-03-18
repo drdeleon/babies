@@ -1,4 +1,8 @@
 .event {
-    width: 10rem;
+    width: 30rem;
     height: 5rem;
+}
+
+.event-info {
+    width: 20rem;
 }

@@ -15,6 +15,7 @@ export default connect(
     undefined,
     (dispatch, { babyId, eventId }) => ({
         onClick() {
+            console.log("DeleteEventID:", eventId);
             dispatch(actions.deleteEvent(babyId, eventId));
         }
     }),

@@ -1,10 +1,9 @@
 import * as types from '../types/event';
-import { v4 as uuidv4 } from 'uuid';
 
-export const addEvent = (type, description) => ({
+export const addEvent = (id, type, description) => ({
     type: types.NEW_EVENT_ADDED,
     payload: {
-        id: uuidv4(),
+        id,
         type,
         description,
         date: new Date(),

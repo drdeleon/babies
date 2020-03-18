@@ -1,10 +1,10 @@
 import * as types from '../types/baby';
 import { v4 as uuidv4 } from 'uuid';
 
-export const createBaby = (name, lastName, birthDate) => ({
+export const createBaby = (id, name, lastName, birthDate) => ({
     type: types.BABY_CREATED,
     payload: {
-        id: uuidv4(),
+        id,
         name,
         lastName,
         birthDate,

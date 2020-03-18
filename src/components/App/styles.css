@@ -1,0 +1,16 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.baby-events-container {
+    width: 40rem;
+    align-self: flex-start;
+    background-color: blue;
+}
+
+.add-event-container {
+    width: 60rem;
+    align-self: flex-end;
+    background-color: green;
+}

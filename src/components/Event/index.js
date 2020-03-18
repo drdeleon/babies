@@ -14,11 +14,15 @@ const Event = ({ babyId, eventId, eventType, eventDescription, eventDate }) => (
         babyId={babyId}
         eventId={eventId}/>
 
-    <h1> {`${babyId}`} </h1>
-    <h1> {`${eventId}`} </h1>
-    <h1> {`${eventType}`} </h1>
-    <h1>{`${eventDescription}`}</h1>
-    <h1>{`${eventDate}`}</h1>
+        <div className="event-info">
+            TIPO: <br/>
+                {`${eventType}`} <br/>
+            DESCRIPCION: <br/>
+                {`${eventDescription}`} <br/>
+            FECHA: <br/>
+                {`${eventDate}`} <br/>
+        </div>
+
 
     </div>
 );

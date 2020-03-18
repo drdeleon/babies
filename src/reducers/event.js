@@ -62,7 +62,7 @@ const eventsToBaby = (state = {}, action) => {
             {
                 return {
                     ...state,
-                    [action.payload.baby]: omit(state[action.payload.baby], action.payload.event),
+                    [action.payload.baby]: state[action.payload.baby].filter(event => event !== action.payload.event),
                 }
             }
 
@@ -87,14 +87,14 @@ export const getAllEvents = state => state.order.map(
 ).filter(event => event !== null);
 
 export const getBabyEvents = (state, babyId) => {
+    console.log("BabyId:", babyId);
+    console.log("Baby events:", state.eventsToBaby[babyId])
+
     if (state.eventsToBaby[babyId] !== undefined) {
-        return state.eventsToBaby[babyId].map(
-            eventId => getEvent(state, eventId),
-        ).filter(event => event !== null);
-    } else {
-        return [];
+        return state.eventsToBaby[babyId].map(eventId => getEvent(state, eventId)).filter(event => event !== null);
     }
 
-}
+    return [];
+};
 
 export const getBabyEvent = (state, babyId, eventId) => getEvent(state, state.eventsToBaby[babyId].find(id => id === eventId));

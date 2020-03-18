@@ -1,6 +1,9 @@
 .delete-event-button {
-    width: 3rem;
-    height: 3rem;
-    font-size: large;
+    width: 2rem;
+    height: 2rem;
+    font-size: medium;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 0rem;
     border-radius: 1rem;
+    background-color: crimson;
 }

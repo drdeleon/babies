@@ -66,13 +66,17 @@ export default withRouter(
         }),
         ( dispatch ) => ({
             onSubmit( selectedBaby, type, description, changeEventType, changeDescription ){
-                const eventId = uuidv4()
-
-                dispatch(actions.addEvent(eventId, type, description));
-                dispatch(actions.assignEventToBaby(selectedBaby, eventId));
-
-                changeEventType('');
-                changeDescription('');
+                if (type !== '') {
+                    const eventId = uuidv4()
+    
+                    dispatch(actions.addEvent(eventId, type, description));
+                    dispatch(actions.assignEventToBaby(selectedBaby, eventId));
+    
+                    changeEventType('');
+                    changeDescription('');
+                } else {
+                    alert('El evento debe tener un tipo!')
+                }
             }
         }),
     )( EventForm )

@@ -8,22 +8,19 @@ import * as selectors from '../../reducers';
 import { withRouter } from 'react-router';
 
 const Event = ({ babyId, eventId, eventType, eventDescription, eventDate }) => (
-    <div className='event'>
+    <div className='event-container'>
+
+        <div className="event-info">
+            TIPO: {`${eventType}`} <br/>
+            DESCRIPCION: {`${eventDescription}`} <br/>
+            FECHA:  s{`${eventDate}`} <br/>
+        </div>
+
         <DeleteEvent
+        className='delete-event-button'
         key={eventId}
         babyId={babyId}
         eventId={eventId}/>
-
-        <div className="event-info">
-            TIPO: <br/>
-                {`${eventType}`} <br/>
-            DESCRIPCION: <br/>
-                {`${eventDescription}`} <br/>
-            FECHA: <br/>
-                {`${eventDate}`} <br/>
-        </div>
-
-
     </div>
 );
 

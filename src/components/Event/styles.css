@@ -1,8 +1,23 @@
-.event {
-    width: 30rem;
-    height: 5rem;
+.event-container {
+    margin-top: 2rem;
+    border-radius: 1rem;
+    width: 27rem;
+    height: 7rem;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(243, 172, 234);
 }
 
 .event-info {
-    width: 20rem;
+    flex: 1;
+    align-self: center;
+    font-family: 'Trebuchet MS';
+    font-size: 13px;
+    width: 25rem;
+    padding: 0rem 1rem;
+}
+
+.delete-event-button {
+    align-self: flex-start;
 }

@@ -1,13 +1,21 @@
-.baby-selected-dropdown {
-    width: 10rem;
-}
-
 .baby-selection-container {
+    align-self: center;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
 }
 
+.baby-selected-dropdown {
+    width: 10rem;
+}
+
 .add-baby-button {
-    border-radius: 1rem;
-    height: 2.5rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border: 2rem;
+    border-radius: 5rem;
+    width: 10rem;
+    background-color: #00c4c0;
+    font-family: 'Trebuchet MS';
+    font-size: medium;
 }

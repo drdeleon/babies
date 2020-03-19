@@ -8,11 +8,11 @@ import * as selectors from '../../reducers'
 import Event from '../Event';
 
 const Events = ({ babyEvents, babyId }) => (
-    <div className="holahola">
+    <div className="events-container">
         {
             babyEvents.length === 0 ? (
-                <h1>
-                    {'No hay evento'}
+                <h1 className='no-event-display'>
+                    {'Aún no hay eventos'}
                 </h1>
             ) : (
                 babyEvents.map(

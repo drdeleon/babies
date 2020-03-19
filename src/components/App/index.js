@@ -20,20 +20,20 @@ const store = configureStore();
 const App = () => (
     <Provider store = {store}>
         <Router history={history}>
-            <div>
+            <div className='window'>
                 <Switch>
-                    <Route exact path='/' component={CreateBaby}>
-                    </Route> 
+                    <Route exact path='/' component={CreateBaby} />
+                    
                     <Route path='/baby'>
+                            <h1 className='title'>The Baby App</h1>
                         <div className="main-container">
-
                             <div className='baby-events-container'>
                                 <SelectBaby />
                                 <Events />
                             </div>
                             <div className='add-event-container'>
-                                    <AddEvent />    
-                        </div>
+                                    <AddEvent />
+                            </div>
                         </div>
                     </Route>
                 </Switch>

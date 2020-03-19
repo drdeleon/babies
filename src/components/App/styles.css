@@ -1,16 +1,32 @@
 .main-container {
     display: flex;
     flex-direction: row;
+    height: 50%;
+    background-color: beige;
 }
 
 .baby-events-container {
-    width: 40rem;
+    width: 50%;
     align-self: flex-start;
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
 }
 
 .add-event-container {
-    width: 60rem;
+    width: 50%;
+    height: 100%;
     align-self: flex-end;
-    background-color: green;
+    background-color: rgb(176, 244, 247);
+}
+
+.window {
+    height: 100%;
+}
+
+.title {
+    background-color: aquamarine;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem;
 }

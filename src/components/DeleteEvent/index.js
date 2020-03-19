@@ -7,7 +7,7 @@ import * as actions from '../../actions/event';
 
 const DeleteEvent = ({ onClick }) => (
     <button className='delete-event-button' onClick={onClick}>
-        {'X'}
+        {'x'}
     </button>
 );
 
